@@ -1,1 +1,137 @@
 [2024-05-13 15:22:19,823: INFO: main: Welcome to our custom logging]
+[2024-05-17 14:56:33,671: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-17 14:56:33,676: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-17 14:59:27,287: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-17 14:59:27,301: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-17 14:59:54,035: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-17 14:59:54,043: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-17 14:59:54,046: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-05-17 14:59:54,049: INFO: common: created directory at: artifacts]
+[2024-05-17 14:59:54,053: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-17 14:59:55,032: INFO: 2366278714: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 23FE:0880:175CEE:1EF255:66472391
+Accept-Ranges: bytes
+Date: Fri, 17 May 2024 09:29:54 GMT
+Via: 1.1 varnish
+X-Served-By: cache-hyd1100025-HYD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1715938194.378182,VS0,VE288
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: e506c52431429d54ebb5797d7943ad49cbf1b75c
+Expires: Fri, 17 May 2024 09:34:54 GMT
+Source-Age: 0
+
+]
+[2024-05-21 10:18:06,948: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-21 10:18:06,971: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-21 10:18:06,983: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-21 10:18:06,986: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-05-21 10:18:06,987: INFO: common: created directory at: artifacts]
+[2024-05-21 10:18:06,988: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-21 10:18:07,097: ERROR: main: <urlopen error [Errno 11001] getaddrinfo failed>]
+Traceback (most recent call last):
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1319, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1365, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1314, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1074, in _send_output
+    self.send(msg)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1018, in send
+    self.connect()
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1453, in connect
+    super().connect()
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 984, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 828, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Gate\DS\End to End ML\End-to-End-Machine-Learning-Project-with-MLFlow\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "D:\Gate\DS\End to End ML\End-to-End-Machine-Learning-Project-with-MLFlow\src\mlProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "D:\Gate\DS\End to End ML\End-to-End-Machine-Learning-Project-with-MLFlow\src\mlProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 240, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+[2024-05-21 10:20:11,819: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-21 10:20:11,825: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-21 10:20:11,827: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-21 10:20:11,828: INFO: common: yaml file: schema.yaml loaded successfully]
+[2024-05-21 10:20:11,829: INFO: common: created directory at: artifacts]
+[2024-05-21 10:20:11,830: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-21 10:20:13,248: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B8D8:41EF8:53A7CF:6432FE:664C2803
+Accept-Ranges: bytes
+Date: Tue, 21 May 2024 04:50:13 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4742-BOM
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716267013.065407,VS0,VE420
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 337fe75eccdfe57ae006454cf31f130579895df0
+Expires: Tue, 21 May 2024 04:55:13 GMT
+Source-Age: 0
+
+]
+[2024-05-21 10:20:13,271: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
