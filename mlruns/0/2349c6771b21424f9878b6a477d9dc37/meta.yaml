@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/Gate/DS/End%20to%20End%20ML/End-to-End-Machine-Learning-Project-with-MLFlow/mlruns/0/2349c6771b21424f9878b6a477d9dc37/artifacts
+end_time: 1716468266140
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2349c6771b21424f9878b6a477d9dc37
+run_name: capricious-cow-752
+run_uuid: 2349c6771b21424f9878b6a477d9dc37
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716468261123
+status: 3
+tags: []
+user_id: DELL

@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/Gate/DS/End%20to%20End%20ML/End-to-End-Machine-Learning-Project-with-MLFlow/mlruns/0/6fd3495582834c5a9864bea83aed3cfa/artifacts
+end_time: 1716468501051
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6fd3495582834c5a9864bea83aed3cfa
+run_name: masked-snake-872
+run_uuid: 6fd3495582834c5a9864bea83aed3cfa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716468496121
+status: 3
+tags: []
+user_id: DELL
